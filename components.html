@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="relative h-screen antialiased bg-no-repeat bg-top bg-cover" style="background-image: url(dist/bg.webp);">
+    <div class="flex items-start justify-around h-full p-4 pt-[30vh]">
+      <div class="mx-auto max-w-[327px] w-[327px]">
+        <img class="w-full mb-4" src="dist/logo.webp" alt="">
+        <button
+          class="w-full flex items-center justify-center py-4 px-8 gap-2 bg-[#691774] rounded-tl-2xl rounded-br-2xl hover:bg-[#3C0F42]"
+        >
+          <span class="text-white font-bold text-md">Join for Free</span>
+
+          <svg
+            class="read-more-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="24"
+            viewBox="0 0 25 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.5 12C4.5 11.4477 4.94772 11 5.5 11H19.5C20.0523 11 20.5 11.4477 20.5 12C20.5 12.5523 20.0523 13 19.5 13H5.5C4.94772 13 4.5 12.5523 4.5 12Z"
+              fill="white"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.7929 4.29289C12.1834 3.90237 12.8166 3.90237 13.2071 4.29289L20.2071 11.2929C20.5976 11.6834 20.5976 12.3166 20.2071 12.7071L13.2071 19.7071C12.8166 20.0976 12.1834 20.0976 11.7929 19.7071C11.4024 19.3166 11.4024 18.6834 11.7929 18.2929L18.0858 12L11.7929 5.70711C11.4024 5.31658 11.4024 4.68342 11.7929 4.29289Z"
+              fill="white"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="absolute bottom-0 w-full hidden breakpoint:block"
+      style="
+        background: linear-gradient(90deg, #ffa700, #fa1f7e, #5bbcb9, #8438ec);
+      "
+    >
+      <div class="pt-6 pb-8 pl-[46px]">
+        <p class="text-base text-white leading-[140%]">
+          Copyright 2022 Megaworld Corporation
+        </p>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 w-full breakpoint:hidden ">
+      <div class="flex justify-center p-6">
+        <p class="text-base leading-[140%]">
+          Copyright 2022 Megaworld Corporation
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!-- Yngwie Solis made this. :P -->
+<html>
+<head>
+<title>Megaworld Lifestyle Malls | Luxury Mall in the Philippines</title>
+$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="dist/output.css" rel="stylesheet" />
+
+<script language="JavaScript">
+<!--
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+	if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+	popup = open('$(link-advert)', 'hotspot_advert', '');
+	setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+	if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+</head>
+<body class="relative h-screen antialiased bg-no-repeat bg-top bg-cover" style="background-image: url(dist/bg.webp);"
+$(if advert-pending == 'yes')
+	onLoad="openAdvert()"
+$(endif)
+>
+
+<div class="flex items-start justify-around h-full p-4 pt-[20vh]">
+	<div class="mx-auto max-w-[327px] w-[327px]">
+	  <img class="w-full mb-4" src="dist/logo.webp" alt="">
+
+<form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+
+<h3 class="text-center">You are logged in!</h3>
+$(if session-time-left)
+	<p class="hidden">connected / left: $(uptime) / $(session-time-left)</p>
+$(else)
+<p class="hidden">connected:$(uptime)</p>
+$(endif)
+
+
+$(if login-by-mac != 'yes')
+
+<input class="w-full flex items-center justify-center py-4 px-8 gap-2 bg-[#691774] rounded-tl-2xl rounded-br-2xl hover:bg-[#3C0F42] text-white font-bold text-md"  type="submit" value="Log Out">
+$(endif)
+</form>
+</div>
+</div>
+
+
+<div
+class="absolute bottom-0 w-full hidden breakpoint:block"
+style="
+  background: linear-gradient(90deg, #ffa700, #fa1f7e, #5bbcb9, #8438ec);
+"
+>
+<div class="pt-6 pb-8 pl-[46px]">
+  <p class="text-base text-white leading-[140%]">
+	Copyright 2022 Megaworld Corporation
+  </p>
+</div>
+</div>
+
+<div class="absolute bottom-0 w-full breakpoint:hidden ">
+<div class="flex justify-center p-6">
+  <p class="text-base leading-[140%]">
+	Copyright 2022 Megaworld Corporation
+  </p>
+</div>
+</div>	
+</body>
+</html>
